@@ -1,0 +1,13 @@
+[package]
+name = "primary_monitor"
+version = "0.1.0"
+edition = "2021"
+authors = ["MadManPetr1"]
+description = "Centers Teamfight Manager 2 on the Windows primary monitor at launch"
+license = "MIT"
+readme = "README.md"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
