@@ -1,0 +1,54 @@
+name: Bug report
+description: Report a reproducible Primary Monitor problem.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: input
+    id: game-version
+    attributes:
+      label: Teamfight Manager 2 version
+      placeholder: "0.5.2"
+    validations:
+      required: true
+  - type: input
+    id: mod-version
+    attributes:
+      label: Primary Monitor version
+      placeholder: "0.1.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: display-mode
+    attributes:
+      label: Display mode
+      options:
+        - Windowed
+        - Borderless
+        - Fullscreen
+    validations:
+      required: true
+  - type: textarea
+    id: monitor-layout
+    attributes:
+      label: Monitor layout
+      description: Include monitor count, resolutions, scaling, and which display Windows marks as primary.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true

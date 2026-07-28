@@ -1,0 +1,24 @@
+name: Feature request
+description: Suggest a focused display-handling improvement.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What startup or monitor-layout problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: layout
+    attributes:
+      label: Relevant monitor layout
+    validations:
+      required: true

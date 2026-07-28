@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private security report
+    url: https://github.com/MadManPetr1/tfm2-primary-monitor/security/advisories/new
+    about: Report security or privacy vulnerabilities privately.
