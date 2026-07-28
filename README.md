@@ -8,9 +8,9 @@ moves the window afterward.
 
 ## Compatibility
 
-- Teamfight Manager 2 `0.5.0`
+- Teamfight Manager 2 `0.5.2`
 - Windows
-- Mod SDK `0.5.0` for source builds
+- Mod SDK `0.5.2` for source builds
 
 ## Installation
 
