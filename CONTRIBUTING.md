@@ -9,8 +9,9 @@ By submitting a contribution, you agree to license it under the
 [Mozilla Public License 2.0](LICENSE). Submit only work you created or have the
 right to contribute.
 
-The Primary Monitor name and original branding are not part of the source-code
-license. Please do not use them to present a fork as an official release.
+MPL-2.0 does not grant trademark rights in the Primary Monitor name. The
+original thumbnail artwork is All Rights Reserved. Forks should use their own
+name and artwork.
 
 ## Before opening an issue
 

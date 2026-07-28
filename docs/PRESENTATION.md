@@ -48,7 +48,8 @@ SOURCE AND CONTRIBUTIONS
 
 Source code and documentation are available under MPL-2.0. Distributed
 modifications to covered files must remain available under the same license.
-The Primary Monitor name and original branding are reserved.
+The original thumbnail artwork is All Rights Reserved. Forks must use their
+own name and artwork.
 
 This is an independent community mod and is not affiliated with or endorsed by
 Team Samoyed.

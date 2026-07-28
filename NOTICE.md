@@ -5,10 +5,10 @@ copyright © 2026 MadManPetr1 and are available under the Mozilla Public License
 2.0. Earlier tagged releases remain available under the license included with
 those releases.
 
-The Primary Monitor name and original branding assets, including
-`thumbnail.png`, are copyright © 2026 MadManPetr1 and are not licensed under
-MPL-2.0. They may be displayed as part of the original project and its
-unmodified release packages. Other reuse requires permission.
+MPL-2.0 does not grant trademark rights in the Primary Monitor name.
+`thumbnail.png` is copyright © 2026 MadManPetr1, All Rights Reserved. It may
+remain with unmodified copies of the original project and its official release
+packages. Forks must use their own artwork unless permission is granted.
 
 Teamfight Manager 2 is the property of Team Samoyed. This project is an
 independent community mod and is not affiliated with or endorsed by Team

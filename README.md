@@ -105,8 +105,9 @@ released under the [Mozilla Public License 2.0](LICENSE). Distributed changes
 to covered files must remain available under MPL-2.0. Earlier tagged releases
 remain under the license shipped with those releases.
 
-The Primary Monitor name and original branding are reserved and are not
-licensed under MPL-2.0; see [NOTICE](NOTICE.md).
+MPL-2.0 does not grant trademark rights in the Primary Monitor name. The
+original thumbnail artwork is All Rights Reserved and is not covered by
+MPL-2.0; see [NOTICE](NOTICE.md).
 
 This is an independent community mod and is not affiliated with or endorsed by
 Team Samoyed.
