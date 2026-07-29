@@ -5,7 +5,7 @@ Small, predictable window placement for **Teamfight Manager 2** on Windows.
 [Features](#features) · [Installation](#installation) · [Behavior](#behavior) · [Building](#building-from-source)
 
 > [!IMPORTANT]
-> Version **0.1.1** is built for Teamfight Manager 2 **0.5.2**.
+> Version **0.1.2** supports Teamfight Manager 2 **0.5.2 and 0.5.3**.
 
 ## Features
 
@@ -19,7 +19,8 @@ Small, predictable window placement for **Teamfight Manager 2** on Windows.
 ## Behavior
 
 Primary Monitor waits until the game window exists, reads its current size,
-finds the Windows primary monitor, and centers the window once. It does not:
+finds the Windows primary monitor, and centers the window once. Failed startup
+lookups are retried at a bounded interval rather than every frame. It does not:
 
 - change resolution or display mode;
 - force the game to remain on one monitor;
@@ -56,9 +57,9 @@ the in-game Mods menu, then restart the game when prompted.
 
 ## Requirements and limitations
 
-- Teamfight Manager 2 `0.5.2`
+- Teamfight Manager 2 `0.5.2` or `0.5.3`
 - Windows
-- The matching `0.5.2` Mod SDK for source builds
+- The `0.5.2` Mod SDK compatibility baseline for release builds
 - The game window title must be `Teamfight Manager2`
 
 Primary Monitor uses the Windows primary-monitor setting. It does not choose a

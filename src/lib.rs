@@ -1,17 +1,31 @@
 use mod_api::*;
 use std::ffi::c_void;
-use std::sync::atomic::{AtomicBool, Ordering};
+use std::sync::atomic::{AtomicBool, AtomicUsize, Ordering};
 
 const MOD_ID: &str = "primary_monitor";
+const RETRY_INTERVAL_FRAMES: usize = 30;
+const GAME_WINDOW_TITLE: &[u16] = &[
+    84, 101, 97, 109, 102, 105, 103, 104, 116, 32, 77, 97, 110, 97, 103, 101, 114, 50, 0,
+];
 
 struct PrimaryMonitorExtension {
     positioned: AtomicBool,
+    retry_frames: AtomicUsize,
 }
 
 impl ModExtension for PrimaryMonitorExtension {
     fn post_update(&self, _scene: &mut Scene, _ui: &mut GameUI, _assets: &mut Assets, _dt: f32) {
-        if !self.positioned.load(Ordering::Acquire) && move_game_window_to_primary() {
-            self.positioned.store(true, Ordering::Release);
+        if self.positioned.load(Ordering::Relaxed) {
+            return;
+        }
+
+        let retry_frame = self.retry_frames.fetch_add(1, Ordering::Relaxed);
+        if !retry_frame.is_multiple_of(RETRY_INTERVAL_FRAMES) {
+            return;
+        }
+
+        if move_game_window_to_primary() {
+            self.positioned.store(true, Ordering::Relaxed);
         }
     }
 }
@@ -56,11 +70,7 @@ unsafe extern "system" {
 }
 
 fn game_window() -> *mut c_void {
-    let window_title: Vec<u16> = "Teamfight Manager2"
-        .encode_utf16()
-        .chain(std::iter::once(0))
-        .collect();
-    unsafe { FindWindowW(std::ptr::null(), window_title.as_ptr()) }
+    unsafe { FindWindowW(std::ptr::null(), GAME_WINDOW_TITLE.as_ptr()) }
 }
 
 fn move_game_window_to_primary() -> bool {
@@ -133,6 +143,7 @@ fn init(_ctx: &GameCtx) -> ModRegistration {
     let mut registration = ModRegistration::new(MOD_ID);
     registration.set_extension(PrimaryMonitorExtension {
         positioned: AtomicBool::new(false),
+        retry_frames: AtomicUsize::new(0),
     });
     registration
 }

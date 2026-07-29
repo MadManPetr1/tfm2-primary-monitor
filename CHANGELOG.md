@@ -6,6 +6,8 @@ The project uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-07-29
+
 ### Changed
 
 - Expanded and standardized the public documentation, contribution guidance,
@@ -13,6 +15,16 @@ The project uses [Semantic Versioning](https://semver.org/).
 - Relicensed new project versions under MPL-2.0 so distributed changes to
   covered files remain shareable.
 - Reserved the original project branding from the source-code license.
+- Rebuilt the native DLL against the Teamfight Manager 2 `0.5.2` Mod SDK as
+  the compatibility baseline.
+- Expanded the supported game range to `>=0.5.2, <0.5.4`.
+- Replaced repeated window-title allocations with a static UTF-16 title.
+- Throttled failed startup window lookups instead of calling Win32 every frame.
+
+### Compatibility
+
+- Verified the compatibility-baseline build against Teamfight Manager 2
+  `0.5.3`.
 
 ## [0.1.1] - 2026-07-28
 
@@ -29,6 +41,7 @@ The project uses [Semantic Versioning](https://semver.org/).
 - Centering within the primary monitor's usable work area while preserving window size.
 - No interference with later manual window movement.
 
-[Unreleased]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/MadManPetr1/tfm2-primary-monitor/tree/v0.1.0
