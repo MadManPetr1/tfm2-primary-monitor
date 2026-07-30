@@ -5,7 +5,7 @@ Small, predictable window placement for **Teamfight Manager 2** on Windows.
 [Features](#features) · [Installation](#installation) · [Behavior](#behavior) · [Building](#building-from-source)
 
 > [!IMPORTANT]
-> Version **0.1.2** supports Teamfight Manager 2 **0.5.2 and 0.5.3**.
+> Version **0.1.3** supports Teamfight Manager 2 **0.5.2 and 0.5.3**.
 
 ## Features
 

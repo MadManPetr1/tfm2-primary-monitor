@@ -32,6 +32,9 @@ foreach ($relativePath in @(
 }
 
 $modInfo = Get-Content -LiteralPath (Join-Path $root "mod.mod_info") -Raw | ConvertFrom-Json
+if ($modInfo.mod_id -ne "primary_monitor") {
+    throw "mod.mod_info must declare mod_id primary_monitor."
+}
 $cargo = Get-Content -LiteralPath (Join-Path $root "Cargo.toml") -Raw
 $cargoVersion = [regex]::Match($cargo, '(?m)^version\s*=\s*"([^"]+)"').Groups[1].Value
 if ($cargoVersion -ne $modInfo.version) {

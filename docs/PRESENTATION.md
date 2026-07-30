@@ -42,7 +42,7 @@ FEATURES
 
 COMPATIBILITY
 
-Primary Monitor 0.1.2 supports Teamfight Manager 2 0.5.2 and 0.5.3 on Windows.
+Primary Monitor 0.1.3 supports Teamfight Manager 2 0.5.2 and 0.5.3 on Windows.
 
 SOURCE AND CONTRIBUTIONS
 

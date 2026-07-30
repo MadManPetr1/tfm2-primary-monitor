@@ -6,6 +6,17 @@ The project uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.3] - 2026-07-30
+
+### Changed
+
+- Added an explicit `primary_monitor` package identity so manual and Workshop
+  installations resolve the same mod ID without relying on the folder name.
+
+### Compatibility
+
+- Revalidated the compatibility-baseline build on Teamfight Manager 2 `0.5.3`.
+
 ## [0.1.2] - 2026-07-29
 
 ### Changed
@@ -41,7 +52,8 @@ The project uses [Semantic Versioning](https://semver.org/).
 - Centering within the primary monitor's usable work area while preserving window size.
 - No interference with later manual window movement.
 
-[Unreleased]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.2...HEAD
+[Unreleased]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.3...HEAD
+[0.1.3]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/MadManPetr1/tfm2-primary-monitor/tree/v0.1.0
