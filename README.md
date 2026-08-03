@@ -87,7 +87,8 @@ To validate and create a player-ready archive:
 - `mod.mod_info` — mod metadata and supported game range
 - `build_local.ps1` — SDK-aware native build
 - `scripts/` — repository validation and release packaging
-- `thumbnail.png` — current in-game and Workshop thumbnail
+- `thumbnail.png` — 256×256 lossless 2× nearest-neighbor thumbnail
+- `assets/thumbnail-master.png` — original 128×128 pixel-art thumbnail
 
 ## Support
 
