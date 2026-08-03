@@ -6,6 +6,23 @@ The project uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.4] - 2026-08-03
+
+### Added
+
+- Unified Better Mod Menu author profile and profile icon.
+- New 256 px pixel-art monitor thumbnail.
+
+### Changed
+
+- Simplified player documentation and release presentation.
+- Cleaned source and release packaging without changing placement behavior.
+
+### Compatibility
+
+- Window-placement behavior and the tested TFM2 `0.5.2`-`0.5.3` range are
+  unchanged.
+
 ## [0.1.3] - 2026-07-30
 
 ### Changed
@@ -52,7 +69,8 @@ The project uses [Semantic Versioning](https://semver.org/).
 - Centering within the primary monitor's usable work area while preserving window size.
 - No interference with later manual window movement.
 
-[Unreleased]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.3...HEAD
+[Unreleased]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.4...HEAD
+[0.1.4]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.0...v0.1.1

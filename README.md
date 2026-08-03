@@ -1,115 +1,75 @@
+<div align="center">
+
+<img src="thumbnail.png" alt="Primary Monitor icon" width="128">
+
 # Primary Monitor
 
-Small, predictable window placement for **Teamfight Manager 2** on Windows.
+Predictable startup placement for **Teamfight Manager 2** on Windows.
 
-[Features](#features) · [Installation](#installation) · [Behavior](#behavior) · [Building](#building-from-source)
+**Primary Monitor 0.1.4 · TFM2 0.5.2–0.5.3 · Windows**
 
-> [!IMPORTANT]
-> Version **0.1.3** supports Teamfight Manager 2 **0.5.2 and 0.5.3**.
+</div>
 
-## Features
-
-- Moves the Teamfight Manager 2 window to the Windows primary monitor once
-  during startup.
-- Centers the window inside the monitor's usable work area.
-- Preserves the current window size.
-- Stops intervening after the first successful placement, so later manual
-  movement remains untouched.
+Primary Monitor moves the game window to the Windows primary monitor and
+centers it once during startup.
 
 ## Behavior
 
-Primary Monitor waits until the game window exists, reads its current size,
-finds the Windows primary monitor, and centers the window once. Failed startup
-lookups are retried at a bounded interval rather than every frame. It does not:
+- Preserves the current window size.
+- Uses the primary monitor's usable work area.
+- Retries failed startup lookups at a bounded interval.
+- Stops after the first successful placement, leaving later manual movement alone.
+- Never reads saves, uses the network, or continuously watches the window.
 
-- change resolution or display mode;
-- force the game to remain on one monitor;
-- watch or repeatedly reposition the window;
-- read, write, or inspect career saves;
-- send data over the network.
+It does not change resolution, display mode, fullscreen behavior, or choose a
+monitor by number.
 
-## Installation
+## Install
 
 ### Steam Workshop
 
-Subscribe on the Teamfight Manager 2 Workshop, enable **Primary Monitor** in
-the in-game Mods menu, then restart the game when prompted.
+Subscribe through the Teamfight Manager 2 Workshop, enable **Primary Monitor**,
+and restart when prompted.
 
-### Manual GitHub release
+### GitHub release
 
-1. Download `primary-monitor-vX.Y.Z.zip` from this repository's
-   [Releases](https://github.com/MadManPetr1/tfm2-primary-monitor/releases).
-   Do not download GitHub's automatic “Source code” archive.
-2. Extract the included `primary_monitor` folder into:
+1. Download `primary-monitor-v0.1.4.zip` from
+   [GitHub Releases](https://github.com/MadManPetr1/tfm2-primary-monitor/releases).
+   Do not use GitHub's automatic source-code archive.
+2. Extract `primary_monitor` into:
 
    ```text
    ...\SteamLibrary\steamapps\common\Teamfight Manager2\mods\
    ```
 
-3. Confirm this structure:
+3. Enable **Primary Monitor** and restart the game.
 
-   ```text
-   Teamfight Manager2\mods\primary_monitor\mod.mod_info
-   Teamfight Manager2\mods\primary_monitor\primary_monitor.dll
-   ```
+## Compatibility
 
-4. Enable **Primary Monitor** in the Mods menu and restart the game.
-
-## Requirements and limitations
-
-- Teamfight Manager 2 `0.5.2` or `0.5.3`
+- Teamfight Manager 2 `0.5.2` and `0.5.3`
 - Windows
-- The `0.5.2` Mod SDK compatibility baseline for release builds
-- The game window title must be `Teamfight Manager2`
+- Release DLL built against the `0.5.2` compatibility-baseline Mod SDK
+- Game window title `Teamfight Manager2`
 
-Primary Monitor uses the Windows primary-monitor setting. It does not choose a
-monitor by number, remember a custom monitor, or alter fullscreen behavior.
+## Troubleshooting
 
-## Building from source
+For a reproducible problem, include the game/mod versions, Windows display
+layout, primary monitor, scaling, window mode, resolution, and the smallest
+enabled-mod list that still reproduces it.
 
-The Mod SDK is not redistributed here. Install the matching SDK with the game,
-then run:
+## Build
 
 ```powershell
 .\build_local.ps1 -SdkDir "C:\path\to\Teamfight Manager2\mod-sdk"
-```
-
-To validate and create a player-ready archive:
-
-```powershell
 .\scripts\validate_repo.ps1
 .\scripts\package_release.ps1 -SdkDir "C:\path\to\Teamfight Manager2\mod-sdk"
 ```
 
-## Project layout
+## License
 
-- `src/lib.rs` — one-time Windows window-placement logic
-- `mod.mod_info` — mod metadata and supported game range
-- `build_local.ps1` — SDK-aware native build
-- `scripts/` — repository validation and release packaging
-- `thumbnail.png` — 256×256 lossless 2× nearest-neighbor thumbnail
-- `assets/thumbnail-master.png` — original 128×128 pixel-art thumbnail
+Source code, scripts, and documentation are licensed under the
+[Mozilla Public License 2.0](LICENSE). Original project branding and thumbnail
+artwork are not covered by MPL-2.0; see [NOTICE.md](NOTICE.md).
 
-## Support
-
-For a reproducible problem, open a bug report with:
-
-- game and Primary Monitor versions;
-- Windows version and display layout;
-- window mode and resolution;
-- the smallest enabled-mod list that still reproduces the problem;
-- expected and actual window position.
-
-## License and attribution
-
-New versions of the original source code, scripts, and documentation are
-released under the [Mozilla Public License 2.0](LICENSE). Distributed changes
-to covered files must remain available under MPL-2.0. Earlier tagged releases
-remain under the license shipped with those releases.
-
-MPL-2.0 does not grant trademark rights in the Primary Monitor name. The
-original thumbnail artwork is All Rights Reserved and is not covered by
-MPL-2.0; see [NOTICE](NOTICE.md).
-
-This is an independent community mod and is not affiliated with or endorsed by
-Team Samoyed.
+This independent community mod is not affiliated with or endorsed by Team
+Samoyed.

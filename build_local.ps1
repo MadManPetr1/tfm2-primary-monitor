@@ -19,7 +19,7 @@ $manifest = Join-Path $PSScriptRoot "Cargo.toml"
 $targetDir = Join-Path $PSScriptRoot "target"
 $baseVersion = (Get-Content -LiteralPath (Join-Path $sdk "base_version.txt") -Raw).Trim()
 if ($baseVersion -ne "0.5.2") {
-    throw "Primary Monitor 0.1.3 must be built with the 0.5.2 compatibility-baseline Mod SDK; found $baseVersion."
+    throw "Primary Monitor 0.1.4 must be built with the 0.5.2 compatibility-baseline Mod SDK; found $baseVersion."
 }
 
 $pinned = Select-String -LiteralPath (Join-Path $sdk "rust-toolchain.toml") `
