@@ -6,7 +6,7 @@
 
 Predictable startup placement for **Teamfight Manager 2** on Windows.
 
-**Primary Monitor 0.1.5 · TFM2 0.5.2–0.5.4 · Windows**
+**Primary Monitor 0.2.0 · TFM2 0.5.2–0.5.4 · Windows**
 
 </div>
 
@@ -33,10 +33,10 @@ and restart when prompted.
 
 ### GitHub release
 
-1. Download `primary-monitor-v0.1.5.zip` from
+1. Download `tfm2-primary-monitor-v0.2.0.zip` from
    [GitHub Releases](https://github.com/MadManPetr1/tfm2-primary-monitor/releases).
    Do not use GitHub's automatic source-code archive.
-2. Extract `primary_monitor` into:
+2. Extract `tfm2_primary_monitor` into:
 
    ```text
    ...\SteamLibrary\steamapps\common\Teamfight Manager2\mods\

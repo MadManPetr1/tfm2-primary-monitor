@@ -6,6 +6,14 @@ The project uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-08-05
+
+### Changed
+
+- Standardized the Cargo crate, mod ID, installed folder, and DLL as
+  `tfm2_primary_monitor`.
+- Kept the existing one-time window placement behavior unchanged.
+
 ## [0.1.5] - 2026-08-05
 
 ### Changed
@@ -81,7 +89,8 @@ The project uses [Semantic Versioning](https://semver.org/).
 - Centering within the primary monitor's usable work area while preserving window size.
 - No interference with later manual window movement.
 
-[Unreleased]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.5...HEAD
+[Unreleased]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.5...v0.2.0
 [0.1.5]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.4...v0.1.5
 [0.1.4]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.2...v0.1.3

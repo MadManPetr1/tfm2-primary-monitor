@@ -2,7 +2,7 @@ use mod_api::*;
 use std::ffi::c_void;
 use std::sync::atomic::{AtomicBool, AtomicUsize, Ordering};
 
-const MOD_ID: &str = "primary_monitor";
+const MOD_ID: &str = "tfm2_primary_monitor";
 const RETRY_INTERVAL_FRAMES: usize = 30;
 const GAME_WINDOW_TITLE: &[u16] = &[
     84, 101, 97, 109, 102, 105, 103, 104, 116, 32, 77, 97, 110, 97, 103, 101, 114, 50, 0,

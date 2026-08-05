@@ -20,16 +20,16 @@ if (-not $SkipBuild) {
     }
 }
 
-$dll = Join-Path $root "primary_monitor.dll"
+$dll = Join-Path $root "tfm2_primary_monitor.dll"
 if (-not (Test-Path -LiteralPath $dll -PathType Leaf)) {
-    throw "primary_monitor.dll is missing."
+    throw "tfm2_primary_monitor.dll is missing."
 }
 
 $modInfo = Get-Content -LiteralPath (Join-Path $root "mod.mod_info") -Raw | ConvertFrom-Json
 $buildRoot = Join-Path $root "builds"
-$releaseRoot = Join-Path $buildRoot "primary-monitor-v$($modInfo.version)"
-$runtimeRoot = Join-Path $releaseRoot "primary_monitor"
-$archive = Join-Path $buildRoot "primary-monitor-v$($modInfo.version).zip"
+$releaseRoot = Join-Path $buildRoot "tfm2-primary-monitor-v$($modInfo.version)"
+$runtimeRoot = Join-Path $releaseRoot "tfm2_primary_monitor"
+$archive = Join-Path $buildRoot "tfm2-primary-monitor-v$($modInfo.version).zip"
 
 if (Test-Path -LiteralPath $releaseRoot) {
     Remove-Item -LiteralPath $releaseRoot -Recurse -Force
@@ -40,7 +40,7 @@ if (Test-Path -LiteralPath $archive) {
 New-Item -ItemType Directory -Path $runtimeRoot -Force | Out-Null
 
 foreach ($name in @(
-    "primary_monitor.dll",
+    "tfm2_primary_monitor.dll",
     "mod.mod_info",
     "mod.override_info",
     "better_mod_menu_profile.json",
