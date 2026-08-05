@@ -6,6 +6,18 @@ The project uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.5] - 2026-08-05
+
+### Changed
+
+- Rebuilt the native DLL against the Teamfight Manager 2 `0.5.4` Mod SDK.
+- Extended the supported base range to `>=0.5.2, <0.5.5` without changing
+  one-time window placement behavior.
+
+### Compatibility
+
+- Runtime-tested on Teamfight Manager 2 `0.5.4`.
+
 ## [0.1.4] - 2026-08-03
 
 ### Added
@@ -69,7 +81,8 @@ The project uses [Semantic Versioning](https://semver.org/).
 - Centering within the primary monitor's usable work area while preserving window size.
 - No interference with later manual window movement.
 
-[Unreleased]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.4...HEAD
+[Unreleased]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.5...HEAD
+[0.1.5]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.4...v0.1.5
 [0.1.4]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.1...v0.1.2

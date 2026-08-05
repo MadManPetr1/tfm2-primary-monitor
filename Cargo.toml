@@ -1,6 +1,6 @@
 [package]
 name = "primary_monitor"
-version = "0.1.4"
+version = "0.1.5"
 edition = "2021"
 authors = ["MadManPetr1"]
 description = "Centers Teamfight Manager 2 on the Windows primary monitor at launch"
