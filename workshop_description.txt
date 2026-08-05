@@ -34,11 +34,11 @@ Requires Windows and the game window title Teamfight Manager2.
 
 This mod contains native code:
 
-[code]primary_monitor.dll[/code]
+[code]tfm2_primary_monitor.dll[/code]
 
 [url=https://github.com/MadManPetr1/tfm2-primary-monitor]Source code on GitHub[/url]
 
-[b]Current version:[/b] v0.1.5
+[b]Current version:[/b] v0.2.0
 [b]Last tested:[/b] 05/08/2026
 
 When reporting a problem, include your game version, Windows display layout, primary monitor, scaling, window mode, and enabled mods.
