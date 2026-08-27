@@ -6,6 +6,48 @@ The project uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.3] - 2026-08-26
+
+### Changed
+
+- Rebuilt the native DLL against the Teamfight Manager 2 `0.5.7` Mod SDK.
+- Restricted the declared base range to `>=0.5.7, <0.5.8` because the native
+  SDK libraries changed and older game versions have not been runtime-tested
+  with this build.
+
+### Compatibility
+
+- Tested on Teamfight Manager 2 `0.5.7`; one-time placement behavior is
+  unchanged.
+
+## [0.2.2] - 2026-08-20
+
+### Changed
+
+- Rebuilt the native DLL against the Teamfight Manager 2 `0.5.6` Mod SDK.
+- Restricted the declared base range to `>=0.5.6, <0.5.7` because the native
+  SDK libraries changed and older game versions have not been runtime-tested
+  with this build.
+
+### Compatibility
+
+- Tested on Teamfight Manager 2 `0.5.6`; one-time placement behavior is
+  unchanged.
+
+## [0.2.1] - 2026-08-12
+
+### Changed
+
+- Rebuilt the native DLL against the Teamfight Manager 2 `0.5.5` Mod SDK.
+- Restricted the declared base range to `>=0.5.5, <0.5.6` because the native
+  SDK libraries changed and older game versions have not been runtime-tested
+  with this build.
+
+### Compatibility
+
+- Tested on Teamfight Manager 2 `0.5.5`; one-time placement behavior is
+  unchanged.
+
 ## [0.2.0] - 2026-08-05
 
 ### Changed
@@ -89,7 +131,10 @@ The project uses [Semantic Versioning](https://semver.org/).
 - Centering within the primary monitor's usable work area while preserving window size.
 - No interference with later manual window movement.
 
-[Unreleased]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.2.3...HEAD
+[0.2.3]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.2.2...v0.2.3
+[0.2.2]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.2.1...v0.2.2
+[0.2.1]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.5...v0.2.0
 [0.1.5]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.4...v0.1.5
 [0.1.4]: https://github.com/MadManPetr1/tfm2-primary-monitor/compare/v0.1.3...v0.1.4
