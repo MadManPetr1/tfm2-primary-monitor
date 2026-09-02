@@ -6,7 +6,7 @@
 
 Predictable startup placement for **Teamfight Manager 2** on Windows.
 
-**Primary Monitor 0.2.3 · TFM2 0.5.7 · Windows**
+**Primary Monitor 0.2.4 · TFM2 0.5.8 · Windows**
 
 </div>
 
@@ -33,7 +33,7 @@ and restart when prompted.
 
 ### GitHub release
 
-1. Download `tfm2-primary-monitor-v0.2.3.zip` from
+1. Download `tfm2-primary-monitor-v0.2.4.zip` from
    [GitHub Releases](https://github.com/MadManPetr1/tfm2-primary-monitor/releases).
    Do not use GitHub's automatic source-code archive.
 2. Extract `tfm2_primary_monitor` into:
@@ -46,9 +46,9 @@ and restart when prompted.
 
 ## Compatibility
 
-- Teamfight Manager 2 `0.5.7`
+- Teamfight Manager 2 `0.5.8`
 - Windows
-- Release DLL built against the `0.5.7` Mod SDK
+- Release DLL built against the `0.5.8` Mod SDK
 - Game window title `Teamfight Manager2`
 
 ## Troubleshooting
@@ -60,9 +60,9 @@ enabled-mod list that still reproduces it.
 ## Build
 
 ```powershell
-.\build_local.ps1 -SdkDir "C:\path\to\Teamfight Manager2\mod-sdk-0.5.7"
+.\build_local.ps1 -SdkDir "C:\path\to\Teamfight Manager2\mod-sdk-0.5.8"
 .\scripts\validate_repo.ps1
-.\scripts\package_release.ps1 -SdkDir "C:\path\to\Teamfight Manager2\mod-sdk-0.5.7"
+.\scripts\package_release.ps1 -SdkDir "C:\path\to\Teamfight Manager2\mod-sdk-0.5.8"
 ```
 
 ## License

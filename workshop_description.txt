@@ -18,7 +18,7 @@ The mod does not change resolution, fullscreen behavior, or display settings.
 
 [h2]Compatibility[/h2]
 
-[b]Tested with:[/b] TFM2 0.5.7
+[b]Tested with:[/b] TFM2 0.5.8
 
 Requires Windows and the game window title Teamfight Manager2.
 
@@ -38,7 +38,7 @@ This mod contains native code:
 
 [url=https://github.com/MadManPetr1/tfm2-primary-monitor]Source code on GitHub[/url]
 
-[b]Current version:[/b] v0.2.3
-[b]Last tested:[/b] 26/08/2026
+[b]Current version:[/b] v0.2.4
+[b]Last tested:[/b] 02/09/2026
 
 When reporting a problem, include your game version, Windows display layout, primary monitor, scaling, window mode, and enabled mods.
