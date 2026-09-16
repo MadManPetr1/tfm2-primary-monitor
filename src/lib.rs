@@ -1,4 +1,4 @@
-use mod_api::*;
+use mod_api_stable::{declare_stable_mod, StableClient, StableExtension, StableHost, StableMod};
 use std::ffi::c_void;
 use std::sync::atomic::{AtomicBool, AtomicUsize, Ordering};
 
@@ -13,8 +13,14 @@ struct PrimaryMonitorExtension {
     retry_frames: AtomicUsize,
 }
 
-impl ModExtension for PrimaryMonitorExtension {
-    fn post_update(&self, _scene: &mut Scene, _ui: &mut GameUI, _assets: &mut Assets, _dt: f32) {
+impl StableExtension for PrimaryMonitorExtension {
+    fn post_update(&self, _ctx: &mut StableClient<'_>, _dt_micros: u64) {
+        self.attempt_placement(move_game_window_to_primary);
+    }
+}
+
+impl PrimaryMonitorExtension {
+    fn attempt_placement(&self, place: impl FnOnce() -> bool) {
         if self.positioned.load(Ordering::Relaxed) {
             return;
         }
@@ -24,7 +30,7 @@ impl ModExtension for PrimaryMonitorExtension {
             return;
         }
 
-        if move_game_window_to_primary() {
+        if place() {
             self.positioned.store(true, Ordering::Relaxed);
         }
     }
@@ -139,8 +145,8 @@ fn move_game_window_to_primary() -> bool {
     }
 }
 
-fn init(_ctx: &GameCtx) -> ModRegistration {
-    let mut registration = ModRegistration::new(MOD_ID);
+fn init(_host: &StableHost) -> StableMod {
+    let mut registration = StableMod::new(MOD_ID);
     registration.set_extension(PrimaryMonitorExtension {
         positioned: AtomicBool::new(false),
         retry_frames: AtomicUsize::new(0),
@@ -148,7 +154,47 @@ fn init(_ctx: &GameCtx) -> ModRegistration {
     registration
 }
 
-declare_mod!(init);
+declare_stable_mod!(init);
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn retries_at_interval_and_stops_after_success() {
+        let extension = PrimaryMonitorExtension {
+            positioned: AtomicBool::new(false),
+            retry_frames: AtomicUsize::new(0),
+        };
+        let mut calls = 0;
+        for _ in 0..100 {
+            extension.attempt_placement(|| {
+                calls += 1;
+                calls == 2
+            });
+        }
+        assert_eq!(calls, 2);
+        assert!(extension.positioned.load(Ordering::Relaxed));
+        assert_eq!(extension.retry_frames.load(Ordering::Relaxed), 31);
+    }
+
+    #[test]
+    fn failed_placement_remains_retryable() {
+        let extension = PrimaryMonitorExtension {
+            positioned: AtomicBool::new(false),
+            retry_frames: AtomicUsize::new(0),
+        };
+        let mut calls = 0;
+        for _ in 0..61 {
+            extension.attempt_placement(|| {
+                calls += 1;
+                false
+            });
+        }
+        assert_eq!(calls, 3);
+        assert!(!extension.positioned.load(Ordering::Relaxed));
+    }
+}
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
