@@ -11,6 +11,7 @@ $ErrorActionPreference = "Stop"
 $root = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 
 Add-Type -AssemblyName System.Drawing
+& (Join-Path $PSScriptRoot "validate_repo.ps1")
 
 if (-not $SkipBuild) {
     & (Join-Path $root "build_local.ps1") -SdkDir $SdkDir
@@ -18,8 +19,6 @@ if (-not $SkipBuild) {
         throw "Release build failed with exit code $LASTEXITCODE."
     }
 }
-
-& (Join-Path $PSScriptRoot "validate_repo.ps1")
 
 $dll = Join-Path $root "tfm2_primary_monitor.dll"
 if (-not (Test-Path -LiteralPath $dll -PathType Leaf)) {

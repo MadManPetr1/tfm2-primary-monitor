@@ -1,3 +1,16 @@
+> [!IMPORTANT]
+> ## Archived / Maintenance Paused
+>
+> This mod is currently unmaintained. The default branch preserves **Primary
+> Monitor 0.2.4**, the last known working release for **TFM2 0.5.8** and its
+> legacy Mod SDK. It is not supported or verified on TFM2 0.6.0.
+>
+> Experimental and incomplete TFM2 0.6.0 Stable API work is preserved on
+> [`recovery/tfm2-0.6.0-compat`](https://github.com/MadManPetr1/tfm2-primary-monitor/tree/recovery/tfm2-0.6.0-compat).
+> There is no planned maintenance schedule, though development may resume in
+> the future. Resume by reviewing that recovery branch against the then-current
+> SDK and validating window placement on a representative multi-monitor setup.
+
 <div align="center">
 
 <img src="thumbnail.png" alt="Primary Monitor icon" width="128">
@@ -6,7 +19,7 @@
 
 Predictable startup placement for **Teamfight Manager 2** on Windows.
 
-**Primary Monitor 0.3.0 · TFM2 0.6.0 · Windows**
+**Primary Monitor 0.2.4 · TFM2 0.5.8 · Windows**
 
 </div>
 
@@ -33,7 +46,7 @@ and restart when prompted.
 
 ### GitHub release
 
-1. Download `tfm2-primary-monitor-v0.3.0.zip` from
+1. Download `tfm2-primary-monitor-v0.2.4.zip` from
    [GitHub Releases](https://github.com/MadManPetr1/tfm2-primary-monitor/releases).
    Do not use GitHub's automatic source-code archive.
 2. Extract `tfm2_primary_monitor` into:
@@ -46,9 +59,9 @@ and restart when prompted.
 
 ## Compatibility
 
-- Teamfight Manager 2 `0.6.0`
+- Teamfight Manager 2 `0.5.8`
 - Windows
-- Release DLL uses the Stable API included with TFM2 `0.6.0`
+- Release DLL built against the `0.5.8` Mod SDK
 - Game window title `Teamfight Manager2`
 
 ## Troubleshooting
@@ -60,9 +73,9 @@ enabled-mod list that still reproduces it.
 ## Build
 
 ```powershell
-.\build_local.ps1 -SdkDir "C:\path\to\Teamfight Manager2\mod-sdk-stable"
+.\build_local.ps1 -SdkDir "C:\path\to\Teamfight Manager2\mod-sdk-0.5.8"
 .\scripts\validate_repo.ps1
-.\scripts\package_release.ps1 -SdkDir "C:\path\to\Teamfight Manager2\mod-sdk-stable"
+.\scripts\package_release.ps1 -SdkDir "C:\path\to\Teamfight Manager2\mod-sdk-0.5.8"
 ```
 
 ## License

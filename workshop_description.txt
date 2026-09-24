@@ -1,3 +1,11 @@
+[h1][ARCHIVED / MAINTENANCE PAUSED][/h1]
+
+This mod is currently unmaintained.
+
+The archived release is the last known working version for TFM2 0.5.8 and the legacy 0.5.8 Mod SDK. It is not supported or verified on TFM2 0.6.0.
+
+Unfinished TFM2 0.6.0 Stable API work is preserved in the source repository under recovery/tfm2-0.6.0-compat in case development resumes later. There is currently no planned update schedule.
+
 [h1]Primary Monitor[/h1]
 
 [b]Start Teamfight Manager 2 centered on your Windows primary monitor.[/b]
@@ -18,7 +26,7 @@ The mod does not change resolution, fullscreen behavior, or display settings.
 
 [h2]Compatibility[/h2]
 
-[b]Tested with:[/b] TFM2 0.6.0
+[b]Tested with:[/b] TFM2 0.5.8
 
 Requires Windows and the game window title Teamfight Manager2.
 
@@ -38,7 +46,7 @@ This mod contains native code:
 
 [url=https://github.com/MadManPetr1/tfm2-primary-monitor]Source code on GitHub[/url]
 
-[b]Current version:[/b] v0.3.0
-[b]Last tested:[/b] 16/09/2026
+[b]Current version:[/b] v0.2.4
+[b]Last tested:[/b] 02/09/2026
 
 When reporting a problem, include your game version, Windows display layout, primary monitor, scaling, window mode, and enabled mods.

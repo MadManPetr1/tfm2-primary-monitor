@@ -6,15 +6,6 @@ The project uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
-## [0.3.0] - 2026-09-16
-
-### Changed
-
-- Migrated from the retired classic SDK to the game's Stable API for TFM2 0.6.0.
-- Preserved one-time placement, window size, retry interval, and later manual movement.
-- Added regression tests for failed placement retries and stopping after success.
-- Builds now use the included `mod-sdk-stable`; no pinned classic Rust toolchain is needed.
-
 ## [0.2.4] - 2026-09-02
 
 ### Changed

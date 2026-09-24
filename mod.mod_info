@@ -2,13 +2,13 @@
   "mod_id": "tfm2_primary_monitor",
   "name": "Primary Monitor",
   "author": "MadManPetr1",
-  "version": "0.3.0",
+  "version": "0.2.4",
   "description": "Centers Teamfight Manager 2 on the Windows primary monitor once during launch, then leaves later manual window movement untouched.",
-  "last_updated": "2026-09-16",
+  "last_updated": "2026-09-02",
   "dependencies": [
     {
       "mod_id": "base",
-      "version": ">=0.6.0, <0.7.0"
+      "version": ">=0.5.8, <0.5.9"
     }
   ]
 }
